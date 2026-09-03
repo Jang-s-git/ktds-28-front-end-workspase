@@ -1,0 +1,63 @@
+.issue-up {
+  padding-left: 10px;
+  display: inline;
+}
+
+ul {
+  display: inline-block;
+}
+
+p {
+  padding: 0 30%;
+}
+
+.news-section {
+  width: 1000px;
+  padding: 10px;
+  /* border: 1px solid #d3d3d3; */
+}
+
+.navigation-item {
+  display: inline-block;
+  padding: 10px;
+  margin: 2px;
+  border: 1px solid #999;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.navigation-item-fun {
+  display: inline-block;
+  padding: 10px;
+  margin: 2px;
+  border: 1px solid #f00;
+  border-radius: 20px;
+  background-color: #f00;
+  color: #fff;
+}
+
+.news {
+  display: inline-block;
+
+  width: 20%;
+  padding: 10px;
+  /* border: 1px solid #d3d3d3; */
+  margin: 5px;
+}
+
+.image {
+  width: 200px;
+  height: 100px;
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.issue {
+  font-size: 12px;
+  margin: 2px;
+}
+
+.menu {
+  font-size: 14px;
+  color: #f00;
+}
