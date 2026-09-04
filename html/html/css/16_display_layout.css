@@ -7,14 +7,18 @@ ul {
   display: inline-block;
 }
 
+.main {
+  text-align: center;
+}
 p {
-  padding: 0 30%;
+  font-size: 14px;
 }
 
 .news-section {
   width: 1000px;
   padding: 10px;
-  /* border: 1px solid #d3d3d3; */
+  border-top: 1px solid #333;
+  margin: 0 auto;
 }
 
 .navigation-item {
@@ -41,23 +45,25 @@ p {
 
   width: 20%;
   padding: 10px;
-  /* border: 1px solid #d3d3d3; */
+
   margin: 5px;
 }
 
 .image {
   width: 200px;
-  height: 100px;
+  height: 120px;
   background-color: #eee;
   border-radius: 10px;
 }
 
 .issue {
+  text-align: left;
   font-size: 12px;
   margin: 2px;
 }
 
 .menu {
+  text-align: left;
   font-size: 14px;
   color: #f00;
 }
