@@ -57,6 +57,7 @@ img {
 
 .content-box-left {
   border-bottom: 1px solid #dbdbdb;
+  width: 70%;
 }
 
 .content-box-left,
@@ -82,8 +83,8 @@ img {
 
 .user-left,
 .user-right {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #profile {
@@ -96,4 +97,5 @@ img {
 #photo {
   width: 12rem;
   height: 12rem;
+  vertical-align: bottom;
 }
