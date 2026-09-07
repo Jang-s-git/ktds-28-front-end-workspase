@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+.absolute-top-left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  background-color: aliceblue;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.absolute-top-right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  background-color: aliceblue;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.absolute-bottom-left {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+
+  background-color: aliceblue;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.absolute-bottom-right {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+
+  background-color: aliceblue;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.fixed-top-left {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  background-color: aliceblue;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.fixed-top-right {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+
+  background-color: aliceblue;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.fixed-bottom-left {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+
+  background-color: aliceblue;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.fixed-bottom-right {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+
+  background-color: aliceblue;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.relative-1 {
+  position: relative;
+  width: 300px;
+
+  background-color: antiquewhite;
+
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.relative-2 {
+  position: relative;
+  width: 300px;
+
+  top: 100px;
+  left: 100px;
+
+  background-color: antiquewhite;
+
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.relative-3 {
+  position: relative;
+  width: 300px;
+
+  bottom: 100px;
+  right: 100px;
+
+  background-color: antiquewhite;
+
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.relative-box {
+  position: relative;
+
+  font-size: 1.1rem;
+
+  width: 300px;
+  height: 600px;
+
+  background-color: aqua;
+
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.relative-box:hover > .absolute-box {
+  position: absolute;
+  top: 0px;
+}
+
+.absolute-box {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  padding: 10px;
+
+  background-color: #ff7eeeaa;
+}
+
+.guide-section {
+  & > h3 {
+    padding-top: 50px;
+  }
+
+  /* .guide-section > ul */
+  & > ul {
+    position: sticky;
+    top: 0px;
+
+    background-color: #fff;
+
+    padding: 10px 0;
+    border: 1px solid #000;
+    margin: 0;
+
+    /* .guide-section > ul > li */
+    & > li {
+      display: inline-block;
+      margin: 0 10px;
+
+      /* .guide-section > ul > li:last-child */
+      & > li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.image-box {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+
+    vertical-align: bottom;
+  }
+
+  & > div {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    text-align: center;
+
+    padding: 10px;
+
+    background-color: #e57effaa;
+  }
+
+  &:hover > div {
+    top: 0px;
+    padding: 47% 0;
+  }
+}
+
+/* .image-box > img {
+  width: 100%;
+  height: 100%;
+
+  vertical-align: bottom;
+}
+
+.image-box > div {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  text-align: center;
+
+  padding: 10px;
+
+  background-color: #e57effaa;
+}
+
+.image-box:hover > div {
+  top: 0px;
+  padding: 47% 0;
+} */
+
+.hover-box {
+  position: relative;
+
+  width: 150px;
+  height: 200px;
+
+  margin: 10px;
+
+  background-color: blanchedalmond;
+
+  & > div {
+    position: absolute;
+    /* display: none; */
+
+    opacity: 0; /* 박스의 투명도 조절 (0: 완전 투명) */
+
+    /* hover-box에 hover 이벤트가 적용되었을 때
+       hover-box > div 의
+       opacity를 0부터 1까지 0.3초 동안 변경 에니메이션 */
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover > div {
+    /* display: block; */
+    opacity: 1; /* 박스의 투명도 조절 (1: 완전 불투명) */
+
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    background-color: aquamarine;
+  }
+}
