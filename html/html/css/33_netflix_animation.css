@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: inline-block;
+  color: #fff;
+
+  & > li {
+    display: inline-block;
+    list-style-type: none;
+    /* background-color: #9995; */
+    padding: 7px 12px;
+    border-radius: 20px;
+    margin-right: 15px;
+  }
+
+  & > .choose {
+    background-color: #9995;
+  }
+}
+
+.main-banner {
+  width: 1200px;
+  height: 700px;
+  background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA2MDhfMjQ2%2FMDAxNzgwODc5MDY2NDg2.4rws6XAQzzQM0IhHr_h34pBgahNoO_1QsnF5dHzpBEkg.VGvqr64CPFMy-N2rOKQm6jZVSED22lLDu_azXlUh1EEg.PNG%2Fimage.png&type=sc960_832");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  border-radius: 20px;
+
+  & > .badge-play {
+    display: inline-block;
+
+    position: absolute;
+    left: 40px;
+    bottom: 50px;
+
+    &::after {
+      display: inline-block;
+      color: #333;
+      /* font-weight: 800; */
+      font-size: 1.2rem;
+      font-weight: 500;
+      background-color: #fff;
+      padding: 7px;
+      border-radius: 20px;
+    }
+  }
+
+  & > .badge-play {
+    &::after {
+      content: "> 재생";
+    }
+  }
+
+  & > .badge-imf {
+    display: inline-block;
+
+    position: absolute;
+    left: 115px;
+    bottom: 50px;
+
+    &::after {
+      display: inline-block;
+      color: #fff;
+      /* font-weight: 800; */
+      font-size: 1.2rem;
+      font-weight: 500;
+      background-color: #9995;
+      padding: 7px;
+      border-radius: 20px;
+    }
+  }
+
+  & > .badge-imf {
+    &::after {
+      content: "상세 정보";
+    }
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 30px 0 0 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.program {
+  position: relative;
+  transition: transform 0.15s;
+
+  &:hover {
+    transform: scale(1.2, 1.2);
+    z-index: 2;
+  }
+
+  & > .badge-top10 {
+    display: inline-block;
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+
+    &::after {
+      display: inline-block;
+      color: #fff;
+      /* font-weight: 800; */
+      font-size: 12px;
+      background-color: #f00;
+      padding: 1px;
+      border-radius: 5px;
+    }
+  }
+
+  & > .badge-top10 {
+    &::after {
+      content: "Top 10";
+    }
+  }
+
+  & > .poster {
+    width: 300px;
+    height: 200px;
+    background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA4MDJfNjEg%2FMDAxNzg1NjU2MTMxOTg5.c4cHUYrmrWEGmLRhAYyDvFeYyi-3S_lhfLMnCQC97sAg.s8NhVy41Ud4xmPq-YAChcAA7lEslslHNcHBg4ojr510g.JPEG%2F%25B3%25DD%25C7%25C3%25B8%25AF%25BD%25BA_%25A1%25AE%25B5%25E9%25C1%25E3%25A1%25AF_%25BF%25F8%25C0%25DB_%25BC%25B3%25C1%25A4_%25B9%25CC%25B8%25AE_%25BA%25B8%25B1%25E2.jpg&type=sc960_832");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    & > .new-contents {
+      position: absolute;
+      bottom: 0;
+      left: 110px;
+      right: 110px;
+
+      text-align: center;
+      color: #fff;
+      font-size: 1rem;
+      background-color: #f00;
+    }
+
+    & > .new-episode {
+      position: absolute;
+      bottom: 0;
+      left: 90px;
+      right: 90px;
+
+      text-align: center;
+      color: #fff;
+      font-size: 1rem;
+      background-color: #f00;
+    }
+  }
+}
