@@ -1,0 +1,362 @@
+/** @format */
+
+* {
+  box-sizing: border-box;
+}
+
+input,
+select {
+  padding: 0.625rem;
+  border: 0;
+  outline: 0;
+}
+
+.form {
+  width: 500px;
+
+  padding: 0.625rem;
+  margin: 0 auto;
+
+  & > .basic-info,
+  & > .personal-info {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+
+    margin-bottom: 0.625rem;
+
+    & > div {
+      padding: 0 0.625rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #ddd;
+      }
+    }
+  }
+
+  & > .basic-info {
+    font-size: 0;
+    & .user-id {
+      & > input[type="text"] {
+        vertical-align: middle;
+        width: calc(100% - 14px - 85px);
+      }
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+
+        width: 14px;
+        height: 12px;
+        content: "";
+
+        background-image: url(../images/naver_sprite.png);
+        background-size: 468px 452px;
+        background-position: bottom -20px right -364px;
+        background-repeat: no-repeat;
+      }
+      &::after {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: right;
+
+        width: 85px;
+        font-size: 1rem;
+
+        content: "@naver.com";
+      }
+    }
+
+    & .user-password {
+      & > input[type="password"] {
+        width: calc(100% - 14px);
+        vertical-align: middle;
+      }
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+
+        width: 14px;
+        height: 12px;
+        content: "";
+
+        background-image: url(../images/naver_sprite.png);
+        background-size: 468px 452px;
+        background-position: bottom -92px right -1px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & .user-email {
+      & > input[type="email"] {
+        width: calc(100% - 14px);
+        vertical-align: middle;
+      }
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+
+        width: 14px;
+        height: 12px;
+        content: "";
+
+        background-image: url(../images/naver_sprite.png);
+        background-size: 468px 452px;
+        background-position: bottom -92px right -1px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  & > .personal-info {
+    font-size: 0;
+
+    & .user-type {
+      padding: 0.625rem 0.625rem;
+      text-align: 0 auto;
+
+      & > div {
+        display: inline-block;
+        text-align: center;
+
+        width: 50%;
+
+        padding: 0.3rem 0.625rem;
+        margin: 0 auto;
+      }
+
+      & input[type="radio"] {
+        display: none;
+
+        & + label {
+          text-align: center;
+
+          border: 1px solid #ddd;
+          padding: 0.3rem 0.625rem;
+
+          font-size: 1rem;
+
+          &:first-of-type {
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+          }
+          &:last-of-type {
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+          }
+        }
+
+        &:checked + label {
+          color: #0bd641;
+          padding: 0.3rem 0.625rem;
+          border-color: #0bd641;
+
+          text-align: center;
+        }
+      }
+    }
+
+    & .user-name {
+      & > input[type="text"] {
+        width: calc(100% - 14px);
+        vertical-align: middle;
+      }
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+
+        width: 14px;
+        height: 12px;
+
+        content: "";
+
+        background-image: url(../images/naver_sprite.png);
+        background-size: 468px 452px;
+        background-position: bottom -92px right -1px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & .user-birthdate {
+      & > input[type="text"] {
+        width: calc(100% - 14px);
+        vertical-align: middle;
+      }
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+
+        width: 14px;
+        height: 12px;
+
+        content: "";
+
+        background-image: url(../images/naver_sprite.png);
+        background-size: 468px 452px;
+        background-position: bottom -92px right -1px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & .user-telecom {
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+
+        width: 14px;
+        height: 12px;
+
+        content: "";
+
+        background-image: url(../images/naver_sprite.png);
+        background-size: 468px 452px;
+        background-position: bottom -92px right -1px;
+        background-repeat: no-repeat;
+      }
+
+      & > div {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+
+        width: calc(100% - 14px);
+
+        font-size: 0.85rem;
+        color: #888;
+
+        padding: 0.625rem;
+
+        & > .telecoms {
+          display: none;
+        }
+
+        &:hover {
+          & > .telecoms {
+            display: block;
+            width: 12rem;
+            position: absolute;
+
+            color: #333;
+            font-size: 0;
+
+            padding: 0;
+            margin: 0;
+
+            list-style: none;
+
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+
+            overflow: hidden;
+
+            & > li {
+              cursor: pointer;
+
+              display: inline-block;
+              width: 50%;
+
+              font-size: 0.75rem;
+              padding: 0.625rem;
+              border-bottom: 1px solid #ccc;
+
+              &:hover {
+                background-color: #eee;
+              }
+              &:nth-child(5),
+              &:nth-child(6) {
+                border-bottom: 0;
+              }
+              &:nth-child(odd) {
+                border-right: 1px solid #ccc;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > .tel-info,
+  & > .agreement-info {
+    padding: 0 0.625rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+  }
+
+  & > .tel-info {
+    font-size: 0;
+
+    margin-bottom: 0.625rem;
+    & > div {
+      & > input[type="tel"] {
+        vertical-align: middle;
+        width: calc(100% - 14px);
+      }
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+
+        width: 14px;
+        height: 12px;
+
+        content: "";
+
+        background-image: url(../images/naver_sprite.png);
+        background-size: 468px 452px;
+        background-position: bottom -92px right -1px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  & > .agreement-info {
+    font-size: 0;
+    & > div {
+      vertical-align: middle;
+      width: calc(100% - 14px);
+      & > input {
+        display: none;
+
+        & + label {
+          display: inline-block;
+          vertical-align: middle;
+
+          font-size: 0.825rem;
+          padding: 0.625rem;
+          padding-left: 0;
+
+          & > div {
+            display: inline-block;
+            & > span {
+              color: #0bd641;
+              font-size: 0.7rem;
+
+              padding-left: 0.625rem;
+            }
+          }
+
+          &::before {
+            display: inline-block;
+            vertical-align: middle;
+            width: 14px;
+            height: 14px;
+
+            content: "";
+          }
+        }
+
+        &:checked + label::before {
+          display: inline-block;
+
+          width: 14px;
+          height: 14px;
+          content: "";
+
+          background-image: url(../images/naver_sprite.png);
+          background-size: 468px 452px;
+          background-position: bottom -21px right -86px;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
